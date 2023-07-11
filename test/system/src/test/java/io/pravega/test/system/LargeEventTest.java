@@ -84,7 +84,7 @@ public class LargeEventTest extends AbstractReadWriteTest {
      * The test fails incase of exceptions while writing to the stream.
      *
      */
-    @Test
+    @Test(timeout = 15000)
     public void largeEventSimpleTest() {
         Service conService = Utils.createPravegaControllerService(null);
         List<URI> ctlURIs = conService.getServiceDetails();
